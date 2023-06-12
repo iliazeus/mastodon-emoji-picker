@@ -48,7 +48,7 @@ async function updateEmojiInContainer(): Promise<void> {
       const img = document.createElement("img");
 
       img.title = ":" + emoji.shortcode + ":";
-      img.src = emoji.static_url;
+      img.src = emoji.url;
       img.dataset.shortcode = emoji.shortcode;
 
       return img;
