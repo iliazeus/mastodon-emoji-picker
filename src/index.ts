@@ -70,7 +70,9 @@ export async function register(options: Options) {
   }
 
   if (_input.value) {
-    updateEmojiInContainer().catch((e) => console.log(e));
+    updateEmojiInContainer().catch(() => {
+      _input.value = "";
+    });
   }
 
   _input.onpaste = _input.onchange = () => {
