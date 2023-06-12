@@ -1,3 +1,10 @@
+const compareKeysIgnoreCase = (
+  a: [string | undefined, unknown],
+  b: [string | undefined, unknown]
+) => {
+  return (a[0] ?? "").toLocaleLowerCase().localeCompare((b[0] ?? "").toLocaleLowerCase());
+};
+
 interface CustomEmoji {
   shortcode: string;
   url: string;
@@ -31,7 +38,7 @@ async function updateEmojiInContainer(): Promise<void> {
     emojisByCategory.set(emoji.category, categoryEmojis);
   }
 
-  const divs = [...emojisByCategory].map(([category, emojis]) => {
+  const divs = [...emojisByCategory].sort(compareKeysIgnoreCase).map(([category, emojis]) => {
     const div = document.createElement("div");
 
     const title = document.createElement("h1");
