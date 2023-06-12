@@ -73,7 +73,7 @@ export async function register(options: Options) {
     updateEmojiInContainer().catch((e) => console.log(e));
   }
 
-  _input.onpaste = _input.onsubmit = () => {
+  _input.onpaste = _input.onchange = () => {
     setTimeout(() => updateEmojiInContainer().catch((e) => console.log(e)), 0);
   };
 
