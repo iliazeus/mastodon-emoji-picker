@@ -1,0 +1,27 @@
+{
+  "name": "mastodon-emoji-picker",
+  "version": "0.1.0",
+  "description": "An external emoji picker tool for custom Mastodon emojis",
+  "main": "www/index.js",
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "watch": "./scripts/watch.sh",
+    "serve": "http-server ./www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iliazeus/mastodon-emoji-picker.git"
+  },
+  "author": "Ilia Pozdnyakov <ilia.pozdnyakov@ya.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iliazeus/mastodon-emoji-picker/issues"
+  },
+  "homepage": "https://github.com/iliazeus/mastodon-emoji-picker#readme",
+  "devDependencies": {
+    "esbuild": "^0.18.1",
+    "http-server": "^14.1.1",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.3"
+  }
+}
