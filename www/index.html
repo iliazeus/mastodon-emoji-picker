@@ -1,7 +1,25 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mastodon Emoji Picker</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
+    <script>
+      window.onload = () => {
+        EmojiPicker.register({
+          input: document.getElementById("url-input"),
+          container: document.getElementById("emojis-container"),
+          initialUrl: document.referrer,
+        });
+      };
+    </script>
   </head>
-  <body></body>
+  <body>
+    <label for="url-input">Paste your instance URL here:</label>
+    <input id="url-input" type="text" placeholder="e.g. https://mastodon.social" />
+    <p>Click on an emoji to copy its code to clipboard.</p>
+    <div id="emojis-container"></div>
+  </body>
 </html>

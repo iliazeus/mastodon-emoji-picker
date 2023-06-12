@@ -1,0 +1,25 @@
+#emojis-container img {
+  width: 64px;
+  height: 64px;
+
+  margin: 10px;
+
+  cursor: pointer;
+
+  transition-property: width, height, margin;
+  transition-duration: 0.2s;
+}
+
+#emojis-container img:hover {
+  width: 80px;
+  height: 80px;
+
+  margin: 2px;
+}
+
+#emojis-container img:active {
+  width: 70px;
+  height: 70px;
+
+  margin: 7px;
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "./scripts/build.sh",
     "watch": "./scripts/watch.sh",
-    "serve": "http-server ./www"
+    "serve": "http-server ./www --cors"
   },
   "repository": {
     "type": "git",
